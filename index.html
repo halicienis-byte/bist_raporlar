@@ -2,237 +2,420 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <title>ADGYO Analiz Raporu Giriş</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Analiz Dashboard Giriş</title>
 
   <style>
     :root {
-      --bg: #f6f4ff;
-      --bg-alt: #ffffff;
-      --fg: #1b1f3b;
-      --fg-muted: #5f647a;
-      --accent: #6366f1;
-      --accent-soft: rgba(99, 102, 241, 0.08);
-      --border: #e2e4f0;
-      --card-shadow: rgba(15, 23, 42, 0.06);
-      --chip-bg: #e0f2fe;
-    }
-
-    [data-theme="dark"] {
       --bg: #020617;
-      --bg-alt: #020617;
+      --bg-alt: #020817;
       --fg: #e5e7eb;
       --fg-muted: #9ca3af;
-      --accent: #818cf8;
-      --accent-soft: rgba(129, 140, 248, 0.16);
-      --border: #1f2937;
-      --card-shadow: rgba(15, 23, 42, 0.8);
-      --chip-bg: #1e293b;
+      --accent: #f97316;
+      --accent-2: #22c55e;
+      --accent-3: #38bdf8;
+      --card: #020617;
+      --border: rgba(148, 163, 184, 0.35);
+      --glow: 0 0 40px rgba(248, 250, 252, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
-      background: radial-gradient(circle at top, #eef2ff 0, var(--bg) 40%, var(--bg) 100%);
-      color: var(--fg);
       min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 55%),
+        radial-gradient(circle at 90% 0%, rgba(249,115,22,0.15), transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(34,197,94,0.18), transparent 55%),
+        #020617;
+      color: var(--fg);
       display: flex;
-      flex-direction: column;
-      transition: background 0.35s ease, color 0.25s ease;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px 16px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+    .shell {
+      max-width: 520px;
+      width: 100%;
+      backdrop-filter: blur(18px);
+      background: radial-gradient(circle at 0% 0%, rgba(15,23,42,0.8), rgba(15,23,42,0.95));
+      border-radius: 28px;
+      border: 1px solid rgba(148,163,184,0.3);
+      box-shadow: 0 22px 60px rgba(15,23,42,0.9);
+      padding: 22px 20px 18px;
+      position: relative;
+      overflow: hidden;
     }
 
-    header {
+    .shell::before,
+    .shell::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(32px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .shell::before {
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(249,115,22,0.4), transparent 70%);
+      top: -90px;
+      right: -40px;
+    }
+
+    .shell::after {
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 70%);
+      bottom: -120px;
+      left: -40px;
+    }
+
+    .header-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
     }
 
-    .brand {
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: conic-gradient(from 180deg, #f97316, #22c55e, #38bdf8, #f97316);
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      position: relative;
     }
 
-    .logo-circle {
-      width: 42px;
-      height: 42px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #6366f1, #ec4899);
+    .logo-inner {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: #020617;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #f9fafb;
-      font-weight: 700;
-      font-size: 1.1rem;
-      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.45);
+      border: 1px solid rgba(15,23,42,0.6);
     }
 
-    .brand-text h1 {
+    .title-block h1 {
+      margin: 0 0 4px;
+      font-size: 1.3rem;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .title-badge {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.16);
+      color: #bbf7d0;
+      border: 1px solid rgba(34,197,94,0.4);
+    }
+
+    .title-block p {
       margin: 0;
-      font-size: 1.5rem;
-    }
-
-    .brand-text p {
-      margin: 2px 0 0;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--fg-muted);
     }
 
-    .theme-toggle {
+    .chip-row {
+      margin: 6px 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chip {
+      font-size: 0.72rem;
+      padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 6px 12px;
-      cursor: pointer;
-      background: rgba(15,23,42,0.03);
+      border: 1px solid rgba(148,163,184,0.4);
+      color: var(--fg-muted);
+      background: rgba(15,23,42,0.88);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.9);
+    }
+
+    .chip-dot.orange {
+      background: #f97316;
+      box-shadow: 0 0 12px rgba(249,115,22,0.9);
+    }
+
+    .chip-dot.blue {
+      background: #38bdf8;
+      box-shadow: 0 0 12px rgba(56,189,248,0.9);
+    }
+
+    .card-main {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.4);
+      padding: 14px 14px 12px;
+      box-shadow: var(--glow);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .report-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ticker-pill {
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(248,250,252,0.06);
+      border: 1px solid rgba(148,163,184,0.5);
+      color: #e5e7eb;
+    }
+
+    .date-pill {
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.4);
+      color: var(--fg-muted);
+    }
+
+    .card-body {
+      font-size: 0.86rem;
+      color: var(--fg-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .card-body b {
+      color: var(--fg);
+    }
+
+    .highlight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 110px;
+      background: radial-gradient(circle at 0 0, rgba(248,250,252,0.07), rgba(15,23,42,0.95));
+      border-radius: 14px;
+      padding: 8px 9px 7px;
+      border: 1px solid rgba(148,163,184,0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--fg-muted);
+    }
+
+    .stat-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dot-up {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .dot-neutral {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #eab308;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .hint-text {
+      font-size: 0.78rem;
       color: var(--fg-muted);
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
-    .section {
-      margin-top: 10px;
+    .hint-text span.icon {
+      font-size: 0.9rem;
     }
 
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-    }
-
-    .card {
-      background: var(--bg-alt);
-      border-radius: 14px;
-      padding: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 24px var(--card-shadow);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .card-title {
-      font-size: 1rem;
+    .btn {
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.88rem;
       font-weight: 600;
-    }
-
-    .card-desc {
-      font-size: 0.82rem;
-      color: var(--fg-muted);
-    }
-
-    .btn-link {
-      background: var(--accent);
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
-      width: fit-content;
+      color: #0f172a;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      box-shadow:
+        0 8px 24px rgba(249,115,22,0.5),
+        0 0 0 1px rgba(15,23,42,0.8);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      white-space: nowrap;
     }
 
-    footer {
-      margin-top: auto;
-      padding: 14px;
-      text-align: center;
-      font-size: 0.75rem;
+    .btn span.icon {
+      font-size: 1.05rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 12px 30px rgba(249,115,22,0.7),
+        0 0 0 1px rgba(15,23,42,0.9);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow:
+        0 6px 16px rgba(249,115,22,0.6),
+        0 0 0 1px rgba(15,23,42,1);
+    }
+
+    .footer-text {
+      margin-top: 10px;
+      font-size: 0.74rem;
       color: var(--fg-muted);
+      text-align: center;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
-
 <body>
-<div class="page">
 
-  <header>
-    <div class="brand">
-      <div class="logo-circle">DB</div>
-      <div class="brand-text">
-        <h1>Analiz Dashboard</h1>
-        <p>HTML raporlarını tek yerde topla ve hızla aç.</p>
+<div class="shell">
+  <div class="header-row">
+    <div class="logo">
+      <div class="logo-inner">AD</div>
+    </div>
+    <div class="title-block">
+      <h1>
+        ADGYO Analiz Portalı
+        <span class="title-badge">canlı · tek rapor</span>
+      </h1>
+      <p>Bu giriş ekranı yalnızca güncel ADGYO analiz raporuna açılır.</p>
+    </div>
+  </div>
+
+  <div class="chip-row">
+    <div class="chip"><span class="chip-dot"></span> Koyu tema · profesyonel görünüm</div>
+    <div class="chip"><span class="chip-dot orange"></span> Neşeli & canlı renk paleti</div>
+    <div class="chip"><span class="chip-dot blue"></span> Tek tıkla rapora geçiş</div>
+  </div>
+
+  <section class="card-main">
+    <div class="card-header">
+      <div class="report-title">
+        📊 ADGYO Detaylı Analiz Raporu
+        <span class="ticker-pill">ADGYO</span>
+      </div>
+      <div class="date-pill">27.11.2025 · Otomatik oluşturulmuş</div>
+    </div>
+
+    <div class="card-body">
+      <b>analiz_raporu_ADGYO_20251127_213528.html</b> dosyası için özel hazırlanmış,
+      koyu temalı ve canlı bir giriş ekranındasın. Aşağıdaki buton raporu
+      yeni bir sekmede açar; başka hiçbir sayfa ile karışmaz.
+    </div>
+
+    <div class="highlight-row">
+      <div class="stat">
+        <div class="stat-label">Rapor türü</div>
+        <div class="stat-value">
+          <span class="dot-up"></span> Otomatik HTML analiz çıktısı
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Kullanım şekli</div>
+        <div class="stat-value">
+          <span class="dot-neutral"></span> Tek tıkla görüntüleme
+        </div>
       </div>
     </div>
 
-    <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
-  </header>
-
-  <!-- ANA PANEL -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">Raporlar ve Dashboardlar</div>
-    </div>
-
-    <div class="grid">
-
-      <!-- Örnek kartlar -->
-      <article class="card">
-        <div class="card-title">Hisse Analiz Paneli</div>
-        <p class="card-desc">Fiyat, kurum, derinlik ve uyum analizleri.</p>
-        <a class="btn-link" href="stocks_dashboard.html" target="_blank">Aç</a>
-      </article>
-
-      <article class="card">
-        <div class="card-title">Makro / EVDS Dashboard</div>
-        <p class="card-desc">EVDS ile ekonomik görünüm.</p>
-        <a class="btn-link" href="evds_macro_dashboard.html" target="_blank">Aç</a>
-      </article>
-
-      <article class="card">
-        <div class="card-title">Kurumsal Gruplama</div>
-        <p class="card-desc">Kurum korelasyon ve davranış ilişkileri.</p>
-        <a class="btn-link" href="kurumsal_gruplama.html" target="_blank">Aç</a>
-      </article>
-
-      <!-- ✔ SENİN DOSYAN: ADGYO RAPORU -->
-      <article class="card">
-        <div class="card-title">ADGYO Analiz Raporu</div>
-        <p class="card-desc">
-          27 Kasım 2025 tarihli otomatik analiz çıktısı.
-        </p>
-        <a class="btn-link" href="analiz_raporu_ADGYO_20251127_213528.html" target="_blank">
-          Raporu Aç
-        </a>
-      </article>
-
+    <div class="card-footer">
+      <div class="hint-text">
+        <span class="icon">💡</span>
+        <span>Bu ekran sadece kapı: asıl tüm içerik rapor dosyasının içinde.</span>
+      </div>
+      <a class="btn" href="analiz_raporu_ADGYO_20251127_213528.html" target="_blank">
+        <span class="icon">🚀</span>
+        <span>Raporu aç</span>
+      </a>
     </div>
   </section>
 
+  <div class="footer-text">
+    İleride başka hisseler/raporlar eklersen, bu yapıya yeni butonlar ve kartlar ekleyebilirsin.
+  </div>
 </div>
-
-<footer>
-  Yeni HTML dosyaları eklemek için yalnızca bu dosyaya link kartı eklemen yeterli.
-</footer>
-
-<script>
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute("data-theme") || "light";
-    const next = current === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-  }
-
-  (function loadTheme() {
-    const saved = localStorage.getItem("theme");
-    if (saved) document.documentElement.setAttribute("data-theme", saved);
-  })();
-</script>
 
 </body>
 </html>
