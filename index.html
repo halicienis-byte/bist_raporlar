@@ -49,8 +49,6 @@
       gap: 18px;
     }
 
-    /* HEADER */
-
     .top-bar {
       display: flex;
       align-items: center;
@@ -191,8 +189,6 @@
     .search-box input::placeholder {
       color: var(--fg-muted);
     }
-
-    /* MAIN GRID */
 
     .main-grid {
       flex: 1;
@@ -407,24 +403,19 @@
       body {
         padding: 12px;
       }
-
       .top-bar {
         padding: 12px 12px;
       }
-
       .top-bar-inner {
         flex-direction: column;
         align-items: flex-start;
       }
-
       .main-grid {
         gap: 12px;
       }
-
       .report-card {
         grid-template-columns: 1fr;
       }
-
       .top-actions {
         width: 100%;
         justify-content: space-between;
@@ -435,8 +426,6 @@
 <body>
 
 <div class="layout">
-
-  <!-- ÜST BAR -->
   <header class="top-bar">
     <div class="top-bar-inner">
       <div class="logo-block">
@@ -461,10 +450,7 @@
     </div>
   </header>
 
-  <!-- ANA İKİ PANEL -->
   <main class="main-grid">
-
-    <!-- KURUMSAL GRUPLAMA PANELİ -->
     <section class="panel">
       <div class="panel-header">
         <div class="panel-title">
@@ -476,13 +462,9 @@
         </div>
         <div class="panel-badge">Klasör mantığı: Kurumsal Gruplama</div>
       </div>
-
-      <ul class="report-list" id="grouping-list">
-        <!-- JS ile dolduruluyor -->
-      </ul>
+      <ul class="report-list" id="grouping-list"></ul>
     </section>
 
-    <!-- KURUMSAL MALİYET PANELİ -->
     <section class="panel">
       <div class="panel-header">
         <div class="panel-title">
@@ -494,20 +476,15 @@
         </div>
         <div class="panel-badge">Klasör mantığı: Kurumsal Maliyet</div>
       </div>
-
-      <ul class="report-list" id="cost-list">
-        <!-- JS ile dolduruluyor -->
-      </ul>
+      <ul class="report-list" id="cost-list"></ul>
     </section>
-
   </main>
 
   <footer class="footer">
-    Rapor bağlantıları yerel veya GitHub Pages ortamınızdaki HTML dosyalarına yönlenir. Yeni rapor eklemek için en alttaki dizi tanımlarını güncellemeniz yeterlidir.
+    Rapor bağlantıları ortamınızdaki HTML dosyalarına yönlenir. Yeni rapor eklemek için en alttaki dizi tanımlarını güncellemeniz yeterlidir.
   </footer>
 </div>
 
-<!-- RAPOR TANIMLARI: SADECE BU BÖLÜMÜ DÜZENLEYEREK YENİ RAPOR EKLEYEBİLİRSİNİZ -->
 <script>
   // Kurumsal Gruplama Analizleri raporları
   const groupingReports = [
@@ -529,6 +506,7 @@
       date: '01.12.2025',
       meta: 'Long/short ortalama maliyet, pozisyon kalitesi'
     },
+    {
       name: 'DMRGD · Kurumsal Maliyet Analizi',
       ticker: 'DMRGD',
       file: 'hisse_detay_DMRGD_2025-11-17_2025-11-28_20251201_162126.html',
@@ -536,8 +514,7 @@
       meta: 'Long/short ortalama maliyet, pozisyon kalitesi'
     }
   ];
-  
-  // Ortak kart oluşturucu
+
   function createReportCard(report) {
     const li = document.createElement('li');
     li.className = 'report-card';
@@ -565,7 +542,6 @@
     return li;
   }
 
-  // Listeleri doldur
   const groupingList = document.getElementById('grouping-list');
   const costList = document.getElementById('cost-list');
 
