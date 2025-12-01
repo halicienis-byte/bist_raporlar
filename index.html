@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>ADGYO Analiz Raporu Giriş</title>
+  <title>Kurumsal Analiz Raporları Portalı</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -34,58 +34,78 @@
         #020617;
       color: var(--fg);
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
       padding: 20px;
     }
 
-    .shell {
-      max-width: 520px;
+    .layout {
+      max-width: 1320px;
       width: 100%;
+      min-height: calc(100vh - 40px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    /* HEADER */
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 18px;
+      border-radius: 22px;
       backdrop-filter: blur(18px);
       background: radial-gradient(circle at 0% 0%, rgba(15,23,42,0.8), rgba(15,23,42,0.95));
-      border-radius: 28px;
-      border: 1px solid rgba(148,163,184,0.3);
+      border: 1px solid rgba(148,163,184,0.35);
       box-shadow: 0 22px 60px rgba(15,23,42,0.9);
-      padding: 22px 20px 18px;
       position: relative;
       overflow: hidden;
     }
 
-    .shell::before,
-    .shell::after {
+    .top-bar::before,
+    .top-bar::after {
       content: "";
       position: absolute;
       border-radius: 999px;
       filter: blur(32px);
-      opacity: 0.9;
+      opacity: 0.8;
       pointer-events: none;
     }
 
-    .shell::before {
+    .top-bar::before {
       width: 220px;
       height: 220px;
       background: radial-gradient(circle, rgba(249,115,22,0.4), transparent 70%);
-      top: -90px;
+      top: -110px;
       right: -40px;
     }
 
-    .shell::after {
+    .top-bar::after {
       width: 220px;
       height: 220px;
       background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 70%);
-      bottom: -120px;
+      bottom: -130px;
       left: -40px;
     }
 
-    .header-row {
+    .top-bar-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
       gap: 12px;
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 1;
     }
 
     .logo {
@@ -117,7 +137,7 @@
 
     .title-block h1 {
       margin: 0 0 4px;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       letter-spacing: 0.02em;
       display: flex;
       align-items: center;
@@ -135,29 +155,29 @@
 
     .title-block p {
       margin: 0;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--fg-muted);
     }
 
-    .chip-row {
-      margin: 6px 0 16px;
+    .top-actions {
       display: flex;
+      align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 6px;
-      position: relative;
-      z-index: 1;
+      justify-content: flex-end;
     }
 
     .chip {
       font-size: 0.72rem;
       padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
+      border: 1px solid rgba(148,163,184,0.55);
       color: var(--fg-muted);
-      background: rgba(15,23,42,0.88);
+      background: rgba(15,23,42,0.9);
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
     }
 
     .chip-dot {
@@ -178,243 +198,482 @@
       box-shadow: 0 0 12px rgba(56,189,248,0.9);
     }
 
-    .card-main {
+    .search-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.95);
+      font-size: 0.8rem;
+      color: var(--fg-muted);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      color: var(--fg);
+      font-size: 0.8rem;
+      min-width: 130px;
+    }
+
+    .search-box input::placeholder {
+      color: var(--fg-muted);
+    }
+
+    /* MAIN GRID */
+
+    .main-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
       position: relative;
       z-index: 1;
-      background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
-      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(15,23,42,0.97), rgba(15,23,42,0.92));
+      border-radius: 22px;
       border: 1px solid rgba(148,163,184,0.4);
       padding: 14px 14px 12px;
       box-shadow: var(--glow);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
     }
 
-    .card-header {
+    .panel-header {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       gap: 10px;
-      align-items: center;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .report-title {
-      font-size: 1.02rem;
-      font-weight: 600;
+    .panel-title {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .panel-title h2 {
+      margin: 0;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+
+    .panel-title span.sub {
+      font-size: 0.78rem;
+      color: var(--fg-muted);
+    }
+
+    .panel-icon {
+      font-size: 1.2rem;
+    }
+
+    .panel-badge {
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.35);
+      color: var(--fg-muted);
+      background: rgba(15,23,42,0.9);
+      white-space: nowrap;
+    }
+
+    .report-list {
+      margin: 4px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+      max-height: calc(100vh - 200px);
+      padding-right: 2px;
+    }
+
+    .report-card {
+      border-radius: 16px;
+      padding: 9px 10px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at 0 0, rgba(248,250,252,0.05), rgba(15,23,42,0.99));
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 0.9fr);
+      gap: 8px;
+      align-items: center;
+    }
+
+    .report-main {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .report-title-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .report-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .ticker-pill {
-      font-size: 0.8rem;
-      padding: 3px 8px;
+      font-size: 0.72rem;
+      padding: 2px 7px;
       border-radius: 999px;
-      background: rgba(248,250,252,0.06);
-      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(248,250,252,0.05);
+      border: 1px solid rgba(148,163,184,0.55);
       color: #e5e7eb;
     }
 
-    .date-pill {
-      font-size: 0.78rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--fg-muted);
-    }
-
-    .card-body {
-      font-size: 0.86rem;
-      color: var(--fg-muted);
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-
-    .card-body b {
-      color: var(--fg);
-    }
-
-    .highlight-row {
+    .report-meta {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .stat {
-      flex: 1;
-      min-width: 110px;
-      background: radial-gradient(circle at 0 0, rgba(248,250,252,0.07), rgba(15,23,42,0.95));
-      border-radius: 14px;
-      padding: 8px 9px 7px;
-      border: 1px solid rgba(148,163,184,0.45);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .stat-label {
-      font-size: 0.72rem;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
       color: var(--fg-muted);
     }
 
-    .stat-value {
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: flex;
+    .meta-item {
+      display: inline-flex;
       align-items: center;
       gap: 4px;
     }
 
-    .dot-up {
-      width: 7px;
-      height: 7px;
+    .meta-dot {
+      width: 6px;
+      height: 6px;
       border-radius: 999px;
       background: #22c55e;
     }
 
-    .dot-neutral {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #eab308;
+    .meta-dot.html {
+      background: #f97316;
     }
 
-    .card-footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .hint-text {
-      font-size: 0.78rem;
-      color: var(--fg-muted);
+    .report-actions {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 6px;
-    }
-
-    .hint-text span.icon {
-      font-size: 0.9rem;
+      flex-wrap: wrap;
     }
 
     .btn {
       border: none;
       cursor: pointer;
       border-radius: 999px;
-      padding: 10px 18px;
-      font-size: 0.88rem;
+      padding: 7px 13px;
+      font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: 0.02em;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    }
+
+    .btn-primary {
       color: #0f172a;
       background: linear-gradient(135deg, #f97316, #fb923c);
       box-shadow:
         0 8px 24px rgba(249,115,22,0.5),
-        0 0 0 1px rgba(15,23,42,0.8);
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-      white-space: nowrap;
-    }
-
-    .btn span.icon {
-      font-size: 1.05rem;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow:
-        0 12px 30px rgba(249,115,22,0.7),
         0 0 0 1px rgba(15,23,42,0.9);
     }
 
-    .btn:active {
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 12px 30px rgba(249,115,22,0.7),
+        0 0 0 1px rgba(15,23,42,1);
+    }
+
+    .btn-primary:active {
       transform: translateY(0);
       box-shadow:
         0 6px 16px rgba(249,115,22,0.6),
         0 0 0 1px rgba(15,23,42,1);
     }
 
-    .footer-text {
-      margin-top: 10px;
+    .btn-ghost {
+      color: var(--fg-muted);
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.5);
+      box-shadow: 0 0 0 1px rgba(15,23,42,1);
+    }
+
+    .btn-ghost:hover {
+      color: var(--fg);
+      background: rgba(15,23,42,1);
+    }
+
+    .btn span.icon {
+      font-size: 0.96rem;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 4px;
       font-size: 0.74rem;
       color: var(--fg-muted);
       text-align: center;
-      position: relative;
-      z-index: 1;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 992px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .report-list {
+        max-height: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 12px;
+      }
+
+      .top-bar {
+        padding: 12px 12px;
+      }
+
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .main-grid {
+        gap: 12px;
+      }
+
+      .report-card {
+        grid-template-columns: 1fr;
+      }
+
+      .top-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="shell">
-  <div class="header-row">
-    <div class="logo">
-      <div class="logo-inner">AD</div>
-    </div>
-    <div class="title-block">
-      <h1>
-        ADGYO Analiz Portalı
-        <span class="title-badge">canlı · tek rapor</span>
-      </h1>
-      <p>Bu giriş ekranı yalnızca güncel ADGYO analiz raporuna açılır.</p>
-    </div>
-  </div>
+<div class="layout">
 
-  <div class="chip-row">
-    <div class="chip"><span class="chip-dot"></span> Koyu tema · profesyonel görünüm</div>
-    <div class="chip"><span class="chip-dot orange"></span> Neşeli & canlı renk paleti</div>
-    <div class="chip"><span class="chip-dot blue"></span> Tek tıkla rapora geçiş</div>
-  </div>
-
-  <section class="card-main">
-    <div class="card-header">
-      <div class="report-title">
-        📊 ADGYO Detaylı Analiz Raporu
-        <span class="ticker-pill">ADGYO</span>
-      </div>
-      <div class="date-pill">27.11.2025 · Otomatik oluşturulmuş</div>
-    </div>
-
-    <div class="card-body">
-      <b>analiz_raporu_ADGYO_20251127_213528.html</b> dosyası için özel hazırlanmış,
-      koyu temalı ve canlı bir giriş ekranındasın. Aşağıdaki buton raporu
-      yeni bir sekmede açar; başka hiçbir sayfa ile karışmaz.
-    </div>
-
-    <div class="highlight-row">
-      <div class="stat">
-        <div class="stat-label">Rapor türü</div>
-        <div class="stat-value">
-          <span class="dot-up"></span> Otomatik HTML analiz çıktısı
+  <!-- ÜST BAR -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="logo-block">
+        <div class="logo">
+          <div class="logo-inner">KA</div>
+        </div>
+        <div class="title-block">
+          <h1>
+            Kurumsal Analiz Portalı
+            <span class="title-badge">tam ekran · profesyonel</span>
+          </h1>
+          <p>Kurumsal Gruplama Analizleri ve Kurumsal Maliyet Analizleri raporlarına tek ekrandan erişim.</p>
         </div>
       </div>
-      <div class="stat">
-        <div class="stat-label">Kullanım şekli</div>
-        <div class="stat-value">
-          <span class="dot-neutral"></span> Tek tıkla görüntüleme
+
+      <div class="top-actions">
+        <div class="chip">
+          <span class="chip-dot"></span>
+          Koyu tema · canlı renk paleti
+        </div>
+        <div class="chip">
+          <span class="chip-dot blue"></span>
+          Tüm raporlar HTML çıktı
+        </div>
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" placeholder="Hisse / kurum / tarih ara (sadece görsel)">
         </div>
       </div>
     </div>
+  </header>
 
-    <div class="card-footer">
-      <div class="hint-text">
-        <span class="icon">💡</span>
-        <span>Bu ekran sadece kapı: asıl tüm içerik rapor dosyasının içinde.</span>
+  <!-- ANA İKİ PANEL -->
+  <main class="main-grid">
+
+    <!-- KURUMSAL GRUPLAMA PANELİ -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <h2>
+            <span class="panel-icon">🧩</span>
+            Kurumsal Gruplama Analizleri
+          </h2>
+          <span class="sub">Kurum kümelenmesi, Smart Score, tahta rejim analizleri</span>
+        </div>
+        <div class="panel-badge">Klasör: <b>Kurumsal_Gruplama_Analizleri</b></div>
       </div>
-      <a class="btn" href="analiz_raporu_ADGYO_20251127_213528.html" target="_blank">
-        <span class="icon">🚀</span>
-        <span>Raporu aç</span>
-      </a>
-    </div>
-  </section>
 
-  <div class="footer-text">
-    
-  </div>
+      <ul class="report-list">
+        <!-- ÖRNEK RAPOR 1 -->
+        <li class="report-card">
+          <div class="report-main">
+            <div class="report-title-row">
+              <span class="report-name">ADGYO · Kurumsal Gruplama Analizi</span>
+              <span class="ticker-pill">ADGYO</span>
+            </div>
+            <div class="report-meta">
+              <span class="meta-item">
+                <span class="meta-dot html"></span> analiz_kurumsal_gruplama_ADGYO_20251127_213528.html
+              </span>
+              <span class="meta-item">
+                📅 27.11.2025
+              </span>
+              <span class="meta-item">
+                ⏱ Otomatik oluşturulmuş
+              </span>
+            </div>
+          </div>
+          <div class="report-actions">
+            <!-- KLASÖR YAPINA GÖRE HREF'İ DÜZENLE -->
+            <a class="btn btn-primary" href="Kurumsal_Gruplama_Analizleri/analiz_kurumsal_gruplama_ADGYO_20251127_213528.html" target="_blank">
+              <span class="icon">🚀</span>
+              <span>Raporu aç</span>
+            </a>
+            <a class="btn btn-ghost" href="Kurumsal_Gruplama_Analizleri/" target="_blank">
+              <span class="icon">📁</span>
+              <span>Klasör</span>
+            </a>
+          </div>
+        </li>
+
+        <!-- ÖRNEK RAPOR 2 -->
+        <li class="report-card">
+          <div class="report-main">
+            <div class="report-title-row">
+              <span class="report-name">X30 Endeksi · Kurumsal Küme Haritası</span>
+              <span class="ticker-pill">X30</span>
+            </div>
+            <div class="report-meta">
+              <span class="meta-item">
+                <span class="meta-dot html"></span> analiz_kurumsal_gruplama_X30_20251126_190012.html
+              </span>
+              <span class="meta-item">📅 26.11.2025</span>
+              <span class="meta-item">🧠 Smart Score + rejim</span>
+            </div>
+          </div>
+          <div class="report-actions">
+            <a class="btn btn-primary" href="Kurumsal_Gruplama_Analizleri/analiz_kurumsal_gruplama_X30_20251126_190012.html" target="_blank">
+              <span class="icon">🚀</span>
+              <span>Raporu aç</span>
+            </a>
+            <a class="btn btn-ghost" href="Kurumsal_Gruplama_Analizleri/" target="_blank">
+              <span class="icon">📁</span>
+              <span>Klasör</span>
+            </a>
+          </div>
+        </li>
+
+        <!-- YENİ RAPORLARI BURAYA KOPYALAYARAK EKLEYEBİLİRSİNİZ -->
+
+      </ul>
+    </section>
+
+    <!-- KURUMSAL MALİYET PANELİ -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <h2>
+            <span class="panel-icon">💰</span>
+            Kurumsal Maliyet Analizleri
+          </h2>
+          <span class="sub">Kurumsal ortalama maliyetler, long/short dağılımı, pozisyon kalitesi</span>
+        </div>
+        <div class="panel-badge">Klasör: <b>Kurumsal_Maliyet_Analizleri</b></div>
+      </div>
+
+      <ul class="report-list">
+        <!-- ÖRNEK RAPOR 1 -->
+        <li class="report-card">
+          <div class="report-main">
+            <div class="report-title-row">
+              <span class="report-name">ADGYO · Kurumsal Maliyet Analizi</span>
+              <span class="ticker-pill">ADGYO</span>
+            </div>
+            <div class="report-meta">
+              <span class="meta-item">
+                <span class="meta-dot html"></span> analiz_kurumsal_maliyet_ADGYO_20251127_213528.html
+              </span>
+              <span class="meta-item">📅 27.11.2025</span>
+              <span class="meta-item">📊 Long & short ortalama maliyet</span>
+            </div>
+          </div>
+          <div class="report-actions">
+            <!-- KLASÖR YAPINA GÖRE HREF'İ DÜZENLE -->
+            <a class="btn btn-primary" href="Kurumsal_Maliyet_Analizleri/analiz_kurumsal_maliyet_ADGYO_20251127_213528.html" target="_blank">
+              <span class="icon">🚀</span>
+              <span>Raporu aç</span>
+            </a>
+            <a class="btn btn-ghost" href="Kurumsal_Maliyet_Analizleri/" target="_blank">
+              <span class="icon">📁</span>
+              <span>Klasör</span>
+            </a>
+          </div>
+        </li>
+
+        <!-- ÖRNEK RAPOR 2 -->
+        <li class="report-card">
+          <div class="report-main">
+            <div class="report-title-row">
+              <span class="report-name">XYZ Hisse · Kurumsal Maliyet Dağılımı</span>
+              <span class="ticker-pill">XYZ</span>
+            </div>
+            <div class="report-meta">
+              <span class="meta-item">
+                <span class="meta-dot html"></span> analiz_kurumsal_maliyet_XYZ_20251126_181045.html
+              </span>
+              <span class="meta-item">📅 26.11.2025</span>
+              <span class="meta-item">📈 Pozisyon kalitesi + PnL verimliliği</span>
+            </div>
+          </div>
+          <div class="report-actions">
+            <a class="btn btn-primary" href="Kurumsal_Maliyet_Analizleri/analiz_kurumsal_maliyet_XYZ_20251126_181045.html" target="_blank">
+              <span class="icon">🚀</span>
+              <span>Raporu aç</span>
+            </a>
+            <a class="btn btn-ghost" href="Kurumsal_Maliyet_Analizleri/" target="_blank">
+              <span class="icon">📁</span>
+              <span>Klasör</span>
+            </a>
+          </div>
+        </li>
+
+        <!-- YENİ RAPORLARI BURAYA KOPYALAYARAK EKLEYEBİLİRSİNİZ -->
+
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Bu portal yalnızca yerel ortamınızdaki HTML raporlarını listeler. Rapor adlarını ve klasör yollarını kendi yapınıza göre güncelleyebilirsiniz.
+  </footer>
 </div>
 
 </body>
