@@ -15,8 +15,8 @@
       --accent-2: #22c55e;
       --accent-3: #38bdf8;
       --card: #020617;
-      --border: rgba(148, 163, 184, 0.35);
-      --glow: 0 0 40px rgba(248, 250, 252, 0.08);
+      --border: rgba(148,163,184,0.35);
+      --glow: 0 0 40px rgba(248,250,252,0.08);
     }
 
     * {
@@ -486,67 +486,69 @@
 </div>
 
 <script>
-  // Kurumsal Gruplama Analizleri raporları
-  const groupingReports = [
-    {
-      name: 'ADGYO · Kurumsal Gruplama Analizi',
-      ticker: 'ADGYO',
-      file: 'analiz_raporu_ADGYO_20251127_213528.html',
-      date: '27.11.2025',
-      meta: 'Kurumsal kümelenme, Smart Score, tahta rejim analizi'
-    }
-  ];
+  document.addEventListener('DOMContentLoaded', function () {
+    // Kurumsal Gruplama Analizleri raporları
+    const groupingReports = [
+      {
+        name: 'ADGYO · Kurumsal Gruplama Analizi',
+        ticker: 'ADGYO',
+        file: 'analiz_raporu_ADGYO_20251127_213528.html',
+        date: '27.11.2025',
+        meta: 'Kurumsal kümelenme, Smart Score, tahta rejim analizi'
+      }
+    ];
 
-  // Kurumsal Maliyet Analizleri raporları
-  const costReports = [
-    {
-      name: 'DAPGM · Kurumsal Maliyet Analizi',
-      ticker: 'DAPGM',
-      file: 'hisse_detay_DAPGM_2025-11-17_2025-11-28_20251201_152027.html',
-      date: '01.12.2025',
-      meta: 'Long/short ortalama maliyet, pozisyon kalitesi'
-    },
-    {
-      name: 'DMRGD · Kurumsal Maliyet Analizi',
-      ticker: 'DMRGD',
-      file: 'hisse_detay_DMRGD_2025-11-17_2025-11-28_20251201_162126.html',
-      date: '01.12.2025',
-      meta: 'Long/short ortalama maliyet, pozisyon kalitesi'
-    }
-  ];
+    // Kurumsal Maliyet Analizleri raporları
+    const costReports = [
+      {
+        name: 'DAPGM · Kurumsal Maliyet Analizi',
+        ticker: 'DAPGM',
+        file: 'hisse_detay_DAPGM_2025-11-17_2025-11-28_20251201_152027.html',
+        date: '01.12.2025',
+        meta: 'Long/short ortalama maliyet, pozisyon kalitesi'
+      },
+      {
+        name: 'DMRGD · Kurumsal Maliyet Analizi',
+        ticker: 'DMRGD',
+        file: 'hisse_detay_DMRGD_2025-11-17_2025-11-28_20251201_162126.html',
+        date: '01.12.2025',
+        meta: 'Long/short ortalama maliyet, pozisyon kalitesi'
+      }
+    ];
 
-  function createReportCard(report) {
-    const li = document.createElement('li');
-    li.className = 'report-card';
-    li.innerHTML = `
-      <div class="report-main">
-        <div class="report-title-row">
-          <span class="report-name">${report.name}</span>
-          <span class="ticker-pill">${report.ticker}</span>
+    function createReportCard(report) {
+      const li = document.createElement('li');
+      li.className = 'report-card';
+      li.innerHTML = `
+        <div class="report-main">
+          <div class="report-title-row">
+            <span class="report-name">${report.name}</span>
+            <span class="ticker-pill">${report.ticker}</span>
+          </div>
+          <div class="report-meta">
+            <span class="meta-item">
+              <span class="meta-dot html"></span> ${report.file}
+            </span>
+            <span class="meta-item">📅 ${report.date}</span>
+            <span class="meta-item">📊 ${report.meta}</span>
+          </div>
         </div>
-        <div class="report-meta">
-          <span class="meta-item">
-            <span class="meta-dot html"></span> ${report.file}
-          </span>
-          <span class="meta-item">📅 ${report.date}</span>
-          <span class="meta-item">📊 ${report.meta}</span>
+        <div class="report-actions">
+          <a class="btn btn-primary" href="${report.file}" target="_blank">
+            <span class="icon">🚀</span>
+            <span>Raporu aç</span>
+          </a>
         </div>
-      </div>
-      <div class="report-actions">
-        <a class="btn btn-primary" href="${report.file}" target="_blank">
-          <span class="icon">🚀</span>
-          <span>Raporu aç</span>
-        </a>
-      </div>
-    `;
-    return li;
-  }
+      `;
+      return li;
+    }
 
-  const groupingList = document.getElementById('grouping-list');
-  const costList = document.getElementById('cost-list');
+    const groupingList = document.getElementById('grouping-list');
+    const costList = document.getElementById('cost-list');
 
-  groupingReports.forEach(r => groupingList.appendChild(createReportCard(r)));
-  costReports.forEach(r => costList.appendChild(createReportCard(r)));
+    groupingReports.forEach(r => groupingList.appendChild(createReportCard(r)));
+    costReports.forEach(r => costList.appendChild(createReportCard(r)));
+  });
 </script>
 
 </body>
