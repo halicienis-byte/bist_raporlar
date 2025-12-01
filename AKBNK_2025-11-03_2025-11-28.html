@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang='tr'>
+<head>
+<meta charset='utf-8' />
+<title>AKBNK - Detay Envanter Raporu</title>
+
+<style>
+body { font-family: Arial, sans-serif; background:#f5f5f5; margin:0; padding:20px; }
+h1 { color:#2c3e50; }
+.summary-card {
+  background:#ecf0f1;
+  border-radius:6px;
+  padding:15px 20px;
+  margin-bottom:20px;
+  border:1px solid #d0d7de;
+}
+.summary-item { margin:4px 0; font-size:14px; }
+.tag { font-weight:bold; }
+table { border-collapse:collapse; width:100%; background:white; }
+th, td { border:1px solid #ddd; padding:6px 8px; font-size:12px; text-align:center; }
+th { background:#34495e; color:white; position:sticky; top:0; }
+tr:nth-child(even) { background:#fafafa; }
+.net_dusuk td { background-color:#eafaf1; color:#145a32; }
+.net_yuksek td { background-color:#fdecea; color:#7b241c; }
+.net_esit td { background-color:#f4f6f7; color:#1a1a1a; }
+.smi_high td { background-color:#eafaf1; color:#145a32; }
+.smi_low td { background-color:#fdecea; color:#7b241c; }
+.pnl-container { display:flex; gap:20px; align-items:flex-start; }
+.pnl-col { flex:1; }
+.pnl-col h3 { text-align:center; margin-top:0; }
+</style>
+
+</head>
+<body>
+<h1>AKBNK - Detay Envanter Raporu</h1>
+<div class='summary-card'>
+<div class='summary-item'><span class='tag'>Tarih Aralığı:</span> 03-11-2025 - 28-11-2025</div>
+<div class='summary-item'><span class='tag'>Son Fiyat:</span> 64.75 TL</div>
+<div class='summary-item'><span class='tag'>Genel Maliyet:</span> 62.94 TL</div>
+<div class='summary-item'><span class='tag'>Alım Maliyeti:</span> 63.12 TL</div>
+<div class='summary-item'><span class='tag'>Satım Maliyeti:</span> 62.34 TL</div>
+</div>
+<table>
+<thead><tr>
+<th>Kurum</th>
+<th>Alım Adet</th>
+<th>Alım Ort. Fiyat</th>
+<th>Alım Hacim</th>
+<th>Satım Adet</th>
+<th>Satım Ort. Fiyat</th>
+<th>Satım Hacim</th>
+<th>Net Adet</th>
+<th>Net Hacim</th>
+<th>Net Maliyet</th>
+</tr></thead><tbody>
+<tr class='net_yuksek'>
+<td>BANK-OF-AMERICA</td>
+<td>299,588,555</td>
+<td>61.23</td>
+<td>18,342,699,733.98</td>
+<td>278,025,174</td>
+<td>61.23</td>
+<td>17,022,316,997.69</td>
+<td>+21,563,381</td>
+<td>+1,320,382,736.29</td>
+<td>63.52</td>
+</tr>
+<tr class='net_dusuk'>
+<td>AK</td>
+<td>193,381,456</td>
+<td>60.92</td>
+<td>11,780,860,714.19</td>
+<td>175,167,398</td>
+<td>61.21</td>
+<td>10,721,945,847.86</td>
+<td>+18,214,058</td>
+<td>+1,058,914,866.33</td>
+<td>62.90</td>
+</tr>
+<tr class='net_dusuk'>
+<td>YAPI KREDI</td>
+<td>516,304,536</td>
+<td>61.08</td>
+<td>31,535,715,009.26</td>
+<td>504,547,684</td>
+<td>61.05</td>
+<td>30,803,151,339.10</td>
+<td>+11,756,852</td>
+<td>+732,563,670.16</td>
+<td>62.98</td>
+</tr>
+<tr class='net_yuksek'>
+<td>TEB</td>
+<td>61,587,403</td>
+<td>61.17</td>
+<td>3,767,509,440.38</td>
+<td>49,860,520</td>
+<td>61.29</td>
+<td>3,055,721,189.60</td>
+<td>+11,726,883</td>
+<td>+711,788,250.78</td>
+<td>63.22</td>
+</tr>
+<tr class='net_dusuk'>
+<td>TERA</td>
+<td>41,183,812</td>
+<td>61.21</td>
+<td>2,520,712,848.27</td>
+<td>30,387,079</td>
+<td>61.32</td>
+<td>1,863,425,729.09</td>
+<td>+10,796,733</td>
+<td>+657,287,119.18</td>
+<td>62.33</td>
+</tr>
+<tr class='net_dusuk'>
+<td>PHILLIPCAPITAL</td>
+<td>19,971,976</td>
+<td>61.46</td>
+<td>1,227,533,397.81</td>
+<td>16,934,586</td>
+<td>61.23</td>
+<td>1,036,911,933.11</td>
+<td>+3,037,390</td>
+<td>+190,621,464.70</td>
+<td>62.88</td>
+</tr>
+<tr class='net_yuksek'>
+<td>GEDIK</td>
+<td>25,992,455</td>
+<td>61.11</td>
+<td>1,588,405,690.81</td>
+<td>25,053,170</td>
+<td>61.27</td>
+<td>1,535,074,345.49</td>
+<td>+939,285</td>
+<td>+53,331,345.32</td>
+<td>64.13</td>
+</tr>
+<tr class='net_yuksek'>
+<td>OSMANLI</td>
+<td>31,255,031</td>
+<td>60.75</td>
+<td>1,898,688,240.51</td>
+<td>30,615,040</td>
+<td>60.94</td>
+<td>1,865,530,625.89</td>
+<td>+639,991</td>
+<td>+33,157,614.62</td>
+<td>64.04</td>
+</tr>
+<tr class='net_dusuk'>
+<td>BASKENT</td>
+<td>1,038,118</td>
+<td>59.57</td>
+<td>61,839,688.00</td>
+<td>506,947</td>
+<td>60.10</td>
+<td>30,467,259.55</td>
+<td>+531,171</td>
+<td>+31,372,428.45</td>
+<td>58.99</td>
+</tr>
+<tr class='net_yuksek'>
+<td>TRIVE</td>
+<td>6,860,499</td>
+<td>60.82</td>
+<td>417,262,780.29</td>
+<td>6,620,707</td>
+<td>60.69</td>
+<td>401,777,614.41</td>
+<td>+239,792</td>
+<td>+15,485,165.88</td>
+<td>64.75</td>
+</tr>
+<tr class='net_dusuk'>
+<td>ALLBATROSS</td>
+<td>734,279</td>
+<td>61.85</td>
+<td>45,415,870.20</td>
+<td>507,578</td>
+<td>61.49</td>
+<td>31,212,606.70</td>
+<td>+226,701</td>
+<td>+14,203,263.50</td>
+<td>62.76</td>
+</tr>
+<tr class='net_yuksek'>
+<td>AHLATCI</td>
+<td>4,926,648</td>
+<td>61.05</td>
+<td>300,766,131.70</td>
+<td>4,708,742</td>
+<td>61.09</td>
+<td>287,662,542.97</td>
+<td>+217,906</td>
+<td>+13,103,588.73</td>
+<td>63.90</td>
+</tr>
+<tr class='net_yuksek'>
+<td>COLENDI</td>
+<td>40,405,471</td>
+<td>60.73</td>
+<td>2,453,782,934.14</td>
+<td>40,230,415</td>
+<td>60.72</td>
+<td>2,442,951,089.45</td>
+<td>+175,056</td>
+<td>+10,831,844.69</td>
+<td>64.15</td>
+</tr>
+<tr class='net_dusuk'>
+<td>ALTERNATIF</td>
+<td>570,051</td>
+<td>61.14</td>
+<td>34,852,304.10</td>
+<td>402,001</td>
+<td>60.90</td>
+<td>24,481,251.80</td>
+<td>+168,050</td>
+<td>+10,371,052.30</td>
+<td>61.96</td>
+</tr>
+<tr class='net_yuksek'>
+<td>ALNUS</td>
+<td>3,845,002</td>
+<td>60.58</td>
+<td>232,913,212.67</td>
+<td>3,755,988</td>
+<td>60.85</td>
+<td>228,542,189.78</td>
+<td>+89,014</td>
+<td>+4,371,022.89</td>
+<td>63.65</td>
+</tr>
+<tr class='net_yuksek'>
+<td>IKON MENKUL</td>
+<td>1,307,945</td>
+<td>61.43</td>
+<td>80,349,128.35</td>
+<td>1,262,998</td>
+<td>61.51</td>
+<td>77,687,005.80</td>
+<td>+44,947</td>
+<td>+2,662,122.55</td>
+<td>63.66</td>
+</tr>
+<tr class='net_yuksek'>
+<td>DESTEK</td>
+<td>570,520</td>
+<td>60.73</td>
+<td>34,645,780.49</td>
+<td>536,214</td>
+<td>60.89</td>
+<td>32,649,478.05</td>
+<td>+34,306</td>
+<td>+1,996,302.44</td>
+<td>63.50</td>
+</tr>
+<tr class='net_dusuk'>
+<td>INTEGRAL</td>
+<td>136,283</td>
+<td>61.83</td>
+<td>8,427,021.65</td>
+<td>103,175</td>
+<td>62.18</td>
+<td>6,415,313.30</td>
+<td>+33,108</td>
+<td>+2,011,708.35</td>
+<td>63.03</td>
+</tr>
+<tr class='net_dusuk'>
+<td>STRATEJI</td>
+<td>689,822</td>
+<td>60.55</td>
+<td>41,770,957.55</td>
+<td>663,691</td>
+<td>61.02</td>
+<td>40,497,741.21</td>
+<td>+26,131</td>
+<td>+1,273,216.34</td>
+<td>63.02</td>
+</tr>
+<tr class='net_dusuk'>
+<td>BLUPAY</td>
+<td>8,362</td>
+<td>60.89</td>
+<td>509,136.55</td>
+<td>3,704</td>
+<td>62.75</td>
+<td>232,416.45</td>
+<td>+4,658</td>
+<td>+276,720.10</td>
+<td>61.79</td>
+</tr>
+<tr class='net_dusuk'>
+<td>METRO</td>
+<td>45</td>
+<td>61.69</td>
+<td>2,776.25</td>
+<td>35</td>
+<td>59.48</td>
+<td>2,081.75</td>
+<td>+10</td>
+<td>+694.50</td>
+<td>61.98</td>
+</tr>
+<tr class='net_dusuk'>
+<td>DINAMIK</td>
+<td>22,007</td>
+<td>60.90</td>
+<td>1,340,308.20</td>
+<td>24,103</td>
+<td>60.70</td>
+<td>1,462,979.00</td>
+<td>-2,096</td>
+<td>-122,670.80</td>
+<td>62.26</td>
+</tr>
+<tr class='net_yuksek'>
+<td>NCM.</td>
+<td>1,002,078</td>
+<td>60.86</td>
+<td>60,988,301.60</td>
+<td>1,006,463</td>
+<td>60.92</td>
+<td>61,317,837.55</td>
+<td>-4,385</td>
+<td>-329,535.95</td>
+<td>64.05</td>
+</tr>
+<tr class='net_yuksek'>
+<td>BIZIM</td>
+<td>129,586</td>
+<td>60.96</td>
+<td>7,899,579.75</td>
+<td>142,965</td>
+<td>61.96</td>
+<td>8,857,769.00</td>
+<td>-13,379</td>
+<td>-958,189.25</td>
+<td>64.56</td>
+</tr>
+<tr class='net_yuksek'>
+<td>INVESTAZ</td>
+<td>3,153,230</td>
+<td>60.29</td>
+<td>190,102,651.61</td>
+<td>3,175,299</td>
+<td>60.25</td>
+<td>191,308,299.99</td>
+<td>-22,069</td>
+<td>-1,205,648.38</td>
+<td>63.83</td>
+</tr>
+<tr class='net_dusuk'>
+<td>GCM YATIRIM</td>
+<td>9,087</td>
+<td>61.92</td>
+<td>562,695.50</td>
+<td>46,596</td>
+<td>58.22</td>
+<td>2,712,956.15</td>
+<td>-37,509</td>
+<td>-2,150,260.65</td>
+<td>58.24</td>
+</tr>
+<tr class='net_yuksek'>
+<td>FIBA</td>
+<td>574,608</td>
+<td>60.53</td>
+<td>34,783,020.61</td>
+<td>627,456</td>
+<td>61.09</td>
+<td>38,330,641.95</td>
+<td>-52,848</td>
+<td>-3,547,621.34</td>
+<td>63.68</td>
+</tr>
+<tr class='net_yuksek'>
+<td>ING YATIRIM</td>
+<td>4,648,227</td>
+<td>60.30</td>
+<td>280,285,423.26</td>
+<td>4,704,508</td>
+<td>60.34</td>
+<td>283,875,055.46</td>
+<td>-56,281</td>
+<td>-3,589,632.20</td>
+<td>64.43</td>
+</tr>
+<tr class='net_yuksek'>
+<td>SEKER</td>
+<td>3,281,556</td>
+<td>61.60</td>
+<td>202,140,384.10</td>
+<td>3,344,186</td>
+<td>61.66</td>
+<td>206,213,237.49</td>
+<td>-62,630</td>
+<td>-4,072,853.39</td>
+<td>64.54</td>
+</tr>
+<tr class='net_yuksek'>
+<td>BTCTURK</td>
+<td>480,590</td>
+<td>60.37</td>
+<td>29,012,550.40</td>
+<td>545,064</td>
+<td>60.73</td>
+<td>33,102,349.85</td>
+<td>-64,474</td>
+<td>-4,089,799.45</td>
+<td>63.56</td>
+</tr>
+<tr class='net_dusuk'>
+<td>PIRAMIT</td>
+<td>1,100,130</td>
+<td>60.16</td>
+<td>66,182,528.20</td>
+<td>1,194,750</td>
+<td>59.70</td>
+<td>71,324,986.35</td>
+<td>-94,620</td>
+<td>-5,142,458.15</td>
+<td>62.60</td>
+</tr>
+<tr class='net_dusuk'>
+<td>ACAR MENKUL</td>
+<td>130,374</td>
+<td>60.21</td>
+<td>7,850,368.80</td>
+<td>238,490</td>
+<td>60.80</td>
+<td>14,501,032.30</td>
+<td>-108,116</td>
+<td>-6,650,663.50</td>
+<td>60.97</td>
+</tr>
+<tr class='net_yuksek'>
+<td>ANADOLU</td>
+<td>6,161,861</td>
+<td>60.80</td>
+<td>374,630,255.24</td>
+<td>6,322,963</td>
+<td>60.88</td>
+<td>384,929,845.25</td>
+<td>-161,102</td>
+<td>-10,299,590.01</td>
+<td>64.14</td>
+</tr>
+<tr class='net_yuksek'>
+<td>ICBC TURKEY</td>
+<td>2,327,756</td>
+<td>61.39</td>
+<td>142,889,620.69</td>
+<td>2,533,589</td>
+<td>61.43</td>
+<td>155,642,960.83</td>
+<td>-205,833</td>
+<td>-12,753,340.14</td>
+<td>64.21</td>
+</tr>
+<tr class='net_dusuk'>
+<td>TURKISH</td>
+<td>912,456</td>
+<td>61.02</td>
+<td>55,676,286.40</td>
+<td>1,201,946</td>
+<td>61.19</td>
+<td>73,543,444.99</td>
+<td>-289,490</td>
+<td>-17,867,158.59</td>
+<td>62.19</td>
+</tr>
+<tr class='net_dusuk'>
+<td>ALB</td>
+<td>3,846,795</td>
+<td>60.42</td>
+<td>232,428,756.64</td>
+<td>4,148,544</td>
+<td>60.48</td>
+<td>250,904,906.30</td>
+<td>-301,749</td>
+<td>-18,476,149.66</td>
+<td>62.41</td>
+</tr>
+<tr class='net_yuksek'>
+<td>A1 CAPITAL</td>
+<td>30,456,335</td>
+<td>61.57</td>
+<td>1,875,068,501.28</td>
+<td>30,834,006</td>
+<td>61.44</td>
+<td>1,894,458,459.12</td>
+<td>-377,671</td>
+<td>-19,389,957.84</td>
+<td>64.75</td>
+</tr>
+<tr class='net_yuksek'>
+<td>VAKIF</td>
+<td>61,239,689</td>
+<td>61.37</td>
+<td>3,758,482,772.49</td>
+<td>61,685,884</td>
+<td>61.39</td>
+<td>3,786,940,421.01</td>
+<td>-446,195</td>
+<td>-28,457,648.52</td>
+<td>64.35</td>
+</tr>
+<tr class='net_yuksek'>
+<td>OYAK</td>
+<td>14,506,024</td>
+<td>61.30</td>
+<td>889,162,919.63</td>
+<td>14,981,099</td>
+<td>60.90</td>
+<td>912,291,668.12</td>
+<td>-475,075</td>
+<td>-23,128,748.49</td>
+<td>64.23</td>
+</tr>
+<tr class='net_yuksek'>
+<td>BURGAN</td>
+<td>4,977,656</td>
+<td>59.59</td>
+<td>296,641,630.55</td>
+<td>5,833,679</td>
+<td>60.17</td>
+<td>351,022,201.25</td>
+<td>-856,023</td>
+<td>-54,380,570.70</td>
+<td>63.28</td>
+</tr>
+<tr class='net_dusuk'>
+<td>UNLU MENKUL</td>
+<td>7,773,171</td>
+<td>61.84</td>
+<td>480,678,368.21</td>
+<td>8,663,833</td>
+<td>61.29</td>
+<td>530,965,533.12</td>
+<td>-890,662</td>
+<td>-50,287,164.91</td>
+<td>61.96</td>
+</tr>
+<tr class='net_yuksek'>
+<td>MEKSA</td>
+<td>16,268,539</td>
+<td>61.29</td>
+<td>997,128,535.66</td>
+<td>17,253,688</td>
+<td>61.03</td>
+<td>1,052,950,815.28</td>
+<td>-985,149</td>
+<td>-55,822,279.62</td>
+<td>63.85</td>
+</tr>
+<tr class='net_yuksek'>
+<td>GARANTI</td>
+<td>63,025,760</td>
+<td>61.18</td>
+<td>3,855,980,274.99</td>
+<td>64,113,441</td>
+<td>61.35</td>
+<td>3,933,249,391.48</td>
+<td>-1,087,681</td>
+<td>-77,269,116.49</td>
+<td>64.75</td>
+</tr>
+<tr class='net_yuksek'>
+<td>YATIRIM-FINANSM</td>
+<td>32,845,468</td>
+<td>61.37</td>
+<td>2,015,612,722.73</td>
+<td>33,947,338</td>
+<td>61.29</td>
+<td>2,080,524,830.59</td>
+<td>-1,101,870</td>
+<td>-64,912,107.86</td>
+<td>64.26</td>
+</tr>
+<tr class='net_yuksek'>
+<td>BULLS</td>
+<td>20,317,539</td>
+<td>60.73</td>
+<td>1,233,870,977.65</td>
+<td>21,591,552</td>
+<td>60.80</td>
+<td>1,312,864,420.12</td>
+<td>-1,274,013</td>
+<td>-78,993,442.47</td>
+<td>63.91</td>
+</tr>
+<tr class='net_yuksek'>
+<td>MARBAS</td>
+<td>11,829,570</td>
+<td>61.22</td>
+<td>724,200,044.49</td>
+<td>13,129,882</td>
+<td>61.15</td>
+<td>802,831,798.65</td>
+<td>-1,300,312</td>
+<td>-78,631,754.16</td>
+<td>63.40</td>
+</tr>
+<tr class='net_yuksek'>
+<td>TACIRLER</td>
+<td>79,331,876</td>
+<td>60.93</td>
+<td>4,833,874,189.95</td>
+<td>80,646,146</td>
+<td>60.96</td>
+<td>4,915,955,913.03</td>
+<td>-1,314,270</td>
+<td>-82,081,723.08</td>
+<td>63.85</td>
+</tr>
+<tr class='net_yuksek'>
+<td>MIDAS</td>
+<td>15,400,644</td>
+<td>60.95</td>
+<td>938,672,285.30</td>
+<td>17,055,859</td>
+<td>61.11</td>
+<td>1,042,359,269.05</td>
+<td>-1,655,215</td>
+<td>-103,686,983.75</td>
+<td>63.91</td>
+</tr>
+<tr class='net_yuksek'>
+<td>DENIZ</td>
+<td>74,413,962</td>
+<td>61.18</td>
+<td>4,552,508,429.88</td>
+<td>76,176,895</td>
+<td>61.29</td>
+<td>4,668,788,052.39</td>
+<td>-1,762,933</td>
+<td>-116,279,622.51</td>
+<td>64.38</td>
+</tr>
+<tr class='net_yuksek'>
+<td>HALK</td>
+<td>25,709,780</td>
+<td>60.86</td>
+<td>1,564,755,173.34</td>
+<td>27,803,961</td>
+<td>60.83</td>
+<td>1,691,284,454.88</td>
+<td>-2,094,181</td>
+<td>-126,529,281.54</td>
+<td>63.96</td>
+</tr>
+<tr class='net_dusuk'>
+<td>ATA</td>
+<td>17,151,540</td>
+<td>60.75</td>
+<td>1,042,037,195.99</td>
+<td>19,645,675</td>
+<td>60.84</td>
+<td>1,195,234,373.64</td>
+<td>-2,494,135</td>
+<td>-153,197,177.65</td>
+<td>63.05</td>
+</tr>
+<tr class='net_yuksek'>
+<td>GLOBAL</td>
+<td>14,288,490</td>
+<td>61.19</td>
+<td>874,356,005.26</td>
+<td>17,266,408</td>
+<td>61.90</td>
+<td>1,068,780,645.15</td>
+<td>-2,977,918</td>
+<td>-194,424,639.89</td>
+<td>64.14</td>
+</tr>
+<tr class='net_dusuk'>
+<td>HSBC</td>
+<td>19,350,576</td>
+<td>61.35</td>
+<td>1,187,141,734.04</td>
+<td>22,524,208</td>
+<td>60.54</td>
+<td>1,363,503,294.68</td>
+<td>-3,173,632</td>
+<td>-176,361,560.64</td>
+<td>61.96</td>
+</tr>
+<tr class='net_yuksek'>
+<td>IS</td>
+<td>155,696,643</td>
+<td>61.19</td>
+<td>9,527,551,526.19</td>
+<td>161,569,310</td>
+<td>61.23</td>
+<td>9,893,042,966.90</td>
+<td>-5,872,667</td>
+<td>-365,491,440.71</td>
+<td>63.92</td>
+</tr>
+<tr class='net_yuksek'>
+<td>INFO</td>
+<td>78,450,640</td>
+<td>60.86</td>
+<td>4,774,370,395.39</td>
+<td>86,261,376</td>
+<td>60.98</td>
+<td>5,260,045,959.82</td>
+<td>-7,810,736</td>
+<td>-485,675,564.43</td>
+<td>64.00</td>
+</tr>
+<tr class='net_dusuk'>
+<td>ZIRAAT</td>
+<td>36,453,585</td>
+<td>61.04</td>
+<td>2,225,148,534.72</td>
+<td>46,754,622</td>
+<td>60.92</td>
+<td>2,848,491,062.96</td>
+<td>-10,301,037</td>
+<td>-623,342,528.24</td>
+<td>62.08</td>
+</tr>
+<tr class='net_dusuk'>
+<td>QNB YATIRIM</td>
+<td>64,784,741</td>
+<td>61.15</td>
+<td>3,961,844,417.14</td>
+<td>95,522,208</td>
+<td>60.49</td>
+<td>5,778,251,730.28</td>
+<td>-30,737,467</td>
+<td>-1,816,407,313.14</td>
+<td>61.44</td>
+</tr>
+</tbody></table>
+<h2>Kurum Bazlı PnL Özeti</h2>
+<div class='pnl-container'>
+<div class='pnl-col'>
+<h3>Pozitif / 0 Realized PnL</h3>
+<table>
+<thead><tr><th>Kurum</th><th>Final Pozisyon</th><th>Ortalama Maliyet</th><th>Net Maliyet</th><th>Realized PnL</th><th>Unrealized PnL</th></tr></thead><tbody>
+<tr><td>AK</td><td>18,214,058</td><td>63.54</td><td>1,157,384,138.46</td><td>98,469,288.65</td><td>21,976,126.10</td></tr>
+<tr><td>BANK-OF-AMERICA</td><td>21,328,026</td><td>64.17</td><td>1,368,606,013.09</td><td>63,462,543.67</td><td>12,383,664.88</td></tr>
+<tr><td>TEB</td><td>11,726,883</td><td>63.31</td><td>742,389,759.76</td><td>30,601,521.32</td><td>16,925,915.18</td></tr>
+<tr><td>YAPI KREDI</td><td>11,756,852</td><td>64.16</td><td>754,356,752.46</td><td>21,793,079.63</td><td>6,899,413.62</td></tr>
+<tr><td>TERA</td><td>10,750,222</td><td>62.35</td><td>670,320,492.86</td><td>16,044,965.57</td><td>25,756,386.88</td></tr>
+<tr><td>OSMANLI</td><td>639,991</td><td>64.13</td><td>41,045,714.63</td><td>7,888,098.97</td><td>393,702.63</td></tr>
+<tr><td>GEDIK</td><td>939,285</td><td>64.25</td><td>60,344,706.72</td><td>7,013,365.58</td><td>473,996.62</td></tr>
+<tr><td>GARANTI</td><td>-1,063,126</td><td>64.60</td><td>68,679,909.57</td><td>6,999,247.70</td><td>-157,499.15</td></tr>
+<tr><td>GLOBAL</td><td>-2,992,918</td><td>64.13</td><td>191,933,517.81</td><td>3,462,368.69</td><td>-1,857,922.99</td></tr>
+<tr><td>DENIZ</td><td>-1,762,933</td><td>64.33</td><td>113,402,181.35</td><td>2,877,426.87</td><td>-747,730.27</td></tr>
+<tr><td>ALNUS</td><td>89,014</td><td>63.67</td><td>5,667,331.60</td><td>1,296,308.07</td><td>82,972.78</td></tr>
+<tr><td>AHLATCI</td><td>217,906</td><td>63.92</td><td>13,928,019.83</td><td>824,432.79</td><td>181,393.66</td></tr>
+<tr><td>PHILLIPCAPITAL</td><td>3,037,390</td><td>62.90</td><td>191,064,581.96</td><td>443,122.71</td><td>5,606,419.89</td></tr>
+<tr><td>COLENDI</td><td>175,056</td><td>64.31</td><td>11,257,329.52</td><td>425,484.50</td><td>77,546.40</td></tr>
+<tr><td>STRATEJI</td><td>36,131</td><td>63.02</td><td>2,277,153.53</td><td>355,938.39</td><td>65,941.81</td></tr>
+<tr><td>BURGAN</td><td>-856,023</td><td>63.28</td><td>54,167,777.79</td><td>212,795.93</td><td>-1,259,711.78</td></tr>
+<tr><td>IKON MENKUL</td><td>44,947</td><td>63.67</td><td>2,861,716.12</td><td>199,591.82</td><td>8,149.83</td></tr>
+<tr><td>FIBA</td><td>-52,848</td><td>63.68</td><td>3,365,116.22</td><td>182,505.74</td><td>-56,791.79</td></tr>
+<tr><td>DESTEK</td><td>34,306</td><td>63.50</td><td>2,178,420.09</td><td>182,117.98</td><td>39,462.82</td></tr>
+<tr><td>BIZIM</td><td>-13,379</td><td>64.56</td><td>863,685.63</td><td>94,503.52</td><td>-2,604.62</td></tr>
+<tr><td>INTEGRAL</td><td>33,108</td><td>63.03</td><td>2,086,644.71</td><td>74,936.43</td><td>60,409.07</td></tr>
+<tr><td>ACAR MENKUL</td><td>-107,616</td><td>60.96</td><td>6,559,829.27</td><td>58,459.24</td><td>-408,306.74</td></tr>
+<tr><td>NCM.</td><td>-4,385</td><td>64.05</td><td>280,840.90</td><td>48,692.95</td><td>-1,991.60</td></tr>
+<tr><td>TRIVE</td><td>239,792</td><td>64.75</td><td>15,526,532.00</td><td>41,365.25</td><td>0.00</td></tr>
+<tr><td>ALTERNATIF</td><td>168,050</td><td>61.96</td><td>10,411,838.22</td><td>40,785.35</td><td>477,801.70</td></tr>
+<tr><td>SEKER</td><td>-62,630</td><td>64.51</td><td>4,040,116.19</td><td>32,741.86</td><td>-15,176.31</td></tr>
+<tr><td>ALLBATROSS</td><td>226,701</td><td>62.76</td><td>14,227,787.86</td><td>24,525.69</td><td>315,081.31</td></tr>
+<tr><td>BLUPAY</td><td>4,658</td><td>61.79</td><td>287,831.36</td><td>11,111.25</td><td>14,239.95</td></tr>
+</tbody></table>
+</div>
+<div class='pnl-col'>
+<h3>Negatif Realized PnL</h3>
+<table>
+<thead><tr><th>Kurum</th><th>Final Pozisyon</th><th>Ortalama Maliyet</th><th>Net Maliyet</th><th>Realized PnL</th><th>Unrealized PnL</th></tr></thead><tbody>
+<tr><td>QNB YATIRIM</td><td>-30,737,467</td><td>61.36</td><td>1,885,914,931.09</td><td>-69,507,639.96</td><td>-104,336,053.84</td></tr>
+<tr><td>HSBC</td><td>-3,173,632</td><td>61.86</td><td>196,334,033.40</td><td>-19,972,467.05</td><td>-8,999,957.30</td></tr>
+<tr><td>ZIRAAT</td><td>-10,301,037</td><td>62.02</td><td>638,860,858.39</td><td>-15,518,339.70</td><td>-28,131,291.05</td></tr>
+<tr><td>INFO</td><td>-7,810,736</td><td>63.79</td><td>498,275,139.93</td><td>-12,599,584.00</td><td>-7,470,017.65</td></tr>
+<tr><td>IS</td><td>-5,870,834</td><td>64.08</td><td>376,193,860.74</td><td>-10,821,102.80</td><td>-3,942,640.70</td></tr>
+<tr><td>OYAK</td><td>-490,729</td><td>64.15</td><td>31,482,167.91</td><td>-7,339,825.97</td><td>-292,534.68</td></tr>
+<tr><td>HALK</td><td>-2,094,181</td><td>63.89</td><td>133,801,288.90</td><td>-7,272,013.24</td><td>-1,796,931.61</td></tr>
+<tr><td>MEKSA</td><td>-978,308</td><td>63.80</td><td>62,418,056.91</td><td>-7,038,723.86</td><td>-927,385.64</td></tr>
+<tr><td>YATIRIM-FINANSM</td><td>-1,101,870</td><td>64.21</td><td>70,748,801.75</td><td>-5,836,698.81</td><td>-597,280.69</td></tr>
+<tr><td>UNLU MENKUL</td><td>-890,662</td><td>61.96</td><td>55,187,177.47</td><td>-4,900,007.82</td><td>-2,394,121.28</td></tr>
+<tr><td>A1 CAPITAL</td><td>-377,671</td><td>64.27</td><td>24,272,057.10</td><td>-4,882,098.90</td><td>-182,140.20</td></tr>
+<tr><td>ATA</td><td>-2,494,135</td><td>63.02</td><td>157,190,651.07</td><td>-3,993,484.06</td><td>-4,304,589.49</td></tr>
+<tr><td>MARBAS</td><td>-1,300,312</td><td>63.37</td><td>82,399,491.93</td><td>-3,767,734.08</td><td>-1,795,710.42</td></tr>
+<tr><td>TACIRLER</td><td>-1,314,270</td><td>64.30</td><td>84,502,476.09</td><td>-2,420,744.05</td><td>-596,506.05</td></tr>
+<tr><td>BULLS</td><td>-1,274,013</td><td>63.88</td><td>81,379,799.71</td><td>-2,386,353.26</td><td>-1,112,542.59</td></tr>
+<tr><td>MIDAS</td><td>-1,655,215</td><td>63.89</td><td>105,752,113.40</td><td>-2,065,134.11</td><td>-1,423,057.49</td></tr>
+<tr><td>PIRAMIT</td><td>-94,620</td><td>62.60</td><td>5,923,289.68</td><td>-780,833.64</td><td>-118,197.36</td></tr>
+<tr><td>ICBC TURKEY</td><td>-205,833</td><td>64.21</td><td>13,216,259.88</td><td>-462,920.74</td><td>-121,718.51</td></tr>
+<tr><td>VAKIF</td><td>-446,195</td><td>64.75</td><td>28,891,126.25</td><td>-433,481.15</td><td>-0.00</td></tr>
+<tr><td>ALB</td><td>-301,749</td><td>62.40</td><td>18,830,297.52</td><td>-354,150.36</td><td>-707,950.09</td></tr>
+<tr><td>INVESTAZ</td><td>-22,069</td><td>63.83</td><td>1,408,764.53</td><td>-203,115.63</td><td>-20,203.22</td></tr>
+<tr><td>TURKISH</td><td>-289,490</td><td>62.19</td><td>18,004,525.14</td><td>-137,364.28</td><td>-667,579.82</td></tr>
+<tr><td>BASKENT</td><td>506,765</td><td>58.78</td><td>29,789,515.14</td><td>-36,792.93</td><td>2,314,047.38</td></tr>
+<tr><td>ING YATIRIM</td><td>-56,281</td><td>64.43</td><td>3,625,994.32</td><td>-36,365.35</td><td>-18,200.40</td></tr>
+<tr><td>GCM YATIRIM</td><td>-37,509</td><td>58.24</td><td>2,184,693.85</td><td>-34,433.35</td><td>-215,882.15</td></tr>
+<tr><td>ANADOLU</td><td>-155,156</td><td>64.11</td><td>9,947,187.39</td><td>-32,899.74</td><td>-106,921.41</td></tr>
+<tr><td>BTCTURK</td><td>-64,474</td><td>63.56</td><td>4,098,209.48</td><td>-8,410.10</td><td>-76,482.00</td></tr>
+<tr><td>DINAMIK</td><td>-2,096</td><td>62.26</td><td>130,497.43</td><td>-7,826.48</td><td>-5,008.97</td></tr>
+<tr><td>METRO</td><td>10</td><td>61.98</td><td>619.75</td><td>-74.75</td><td>-37.25</td></tr>
+</tbody></table>
+</div>
+</div>
+<h2>Tahta Rejimi</h2>
+<table>
+<thead><tr><th>Rejim</th><th>ΔP (P_short - P_long)</th><th>Net Pozisyon</th><th>Net Equity</th><th>P_long</th><th>P_short</th><th>P_genel</th></tr></thead><tbody>
+<tr><td>Short-dominant</td><td>-0.994</td><td>-287,251</td><td>-505,298.65</td><td>63.57</td><td>62.57</td><td>63.07</td></tr>
+</tbody></table>
+<p><strong>Yorum:</strong> Short taraf ucuz maliyetle tahtaya hakim; düşüş yönlü baskı güçlü.</p>
+<h2>Smart Money Index – Kurum Skorları</h2>
+<table>
+<thead><tr><th>Kurum</th><th>Smart Skor</th><th>Final Pozisyon</th><th>Final Equity</th><th>PnL Verimliliği</th><th>Pozisyon Kalitesi</th><th>MM Index</th><th>Flatness</th><th>Cluster</th></tr></thead><tbody>
+<tr class='smi_high'><td>AK</td><td>0.706</td><td>18,214,058</td><td>120,445,414.75</td><td>0.0044</td><td>-0.005</td><td>0.791</td><td>0.948</td><td>Smart Long / Trend Follower</td></tr>
+<tr class=''><td>BANK-OF-AMERICA</td><td>0.641</td><td>21,328,026</td><td>75,846,208.55</td><td>0.0018</td><td>0.009</td><td>0.758</td><td>0.961</td><td>Smart Long / Trend Follower</td></tr>
+<tr class=''><td>BLUPAY</td><td>0.640</td><td>4,658</td><td>25,351.20</td><td>0.0150</td><td>0.278</td><td>0.723</td><td>0.593</td><td>Smart Long / Trend Follower</td></tr>
+<tr class=''><td>YAPI KREDI</td><td>0.601</td><td>11,756,852</td><td>28,692,493.25</td><td>0.0003</td><td>0.013</td><td>0.752</td><td>0.988</td><td>Smart Long / Trend Follower</td></tr>
+<tr class=''><td>TEB</td><td>0.570</td><td>11,726,883</td><td>47,527,436.50</td><td>0.0045</td><td>-0.018</td><td>0.753</td><td>0.889</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>TERA</td><td>0.541</td><td>10,750,222</td><td>41,801,352.45</td><td>0.0037</td><td>-0.014</td><td>0.706</td><td>0.841</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>BIZIM</td><td>0.518</td><td>-13,379</td><td>91,898.90</td><td>0.0056</td><td>0.039</td><td>0.812</td><td>0.948</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>INTEGRAL</td><td>0.505</td><td>33,108</td><td>135,345.50</td><td>0.0050</td><td>-0.014</td><td>0.739</td><td>0.855</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>STRATEJI</td><td>0.498</td><td>36,131</td><td>421,880.20</td><td>0.0043</td><td>-0.021</td><td>0.807</td><td>0.972</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>GEDIK</td><td>0.494</td><td>939,285</td><td>7,487,362.20</td><td>0.0022</td><td>-0.010</td><td>0.779</td><td>0.981</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>OSMANLI</td><td>0.494</td><td>639,991</td><td>8,281,801.60</td><td>0.0021</td><td>-0.017</td><td>0.782</td><td>0.989</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ALNUS</td><td>0.488</td><td>89,014</td><td>1,379,280.85</td><td>0.0028</td><td>0.005</td><td>0.793</td><td>0.988</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>GARANTI</td><td>0.488</td><td>-1,063,126</td><td>6,841,748.55</td><td>0.0009</td><td>-0.009</td><td>0.764</td><td>0.991</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ACAR MENKUL</td><td>0.487</td><td>-107,616</td><td>-349,847.50</td><td>0.0026</td><td>0.029</td><td>0.585</td><td>0.688</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>FIBA</td><td>0.483</td><td>-52,848</td><td>125,713.95</td><td>0.0025</td><td>0.003</td><td>0.764</td><td>0.953</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>GLOBAL</td><td>0.481</td><td>-2,992,918</td><td>1,604,445.70</td><td>0.0018</td><td>-0.005</td><td>0.716</td><td>0.900</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>DENIZ</td><td>0.479</td><td>-1,762,933</td><td>2,129,696.60</td><td>0.0003</td><td>0.003</td><td>0.752</td><td>0.988</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>DESTEK</td><td>0.478</td><td>34,306</td><td>221,580.80</td><td>0.0027</td><td>-0.053</td><td>0.777</td><td>0.967</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>AHLATCI</td><td>0.473</td><td>217,906</td><td>1,005,826.45</td><td>0.0014</td><td>-0.000</td><td>0.762</td><td>0.976</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>IKON MENKUL</td><td>0.473</td><td>44,947</td><td>207,741.65</td><td>0.0013</td><td>0.023</td><td>0.763</td><td>0.982</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>PHILLIPCAPITAL</td><td>0.469</td><td>3,037,390</td><td>6,049,542.60</td><td>0.0002</td><td>0.016</td><td>0.699</td><td>0.913</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>VAKIF</td><td>0.467</td><td>-446,195</td><td>-433,481.15</td><td>-0.0001</td><td>-0.007</td><td>0.751</td><td>0.996</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>TACIRLER</td><td>0.467</td><td>-1,314,270</td><td>-3,017,250.10</td><td>-0.0002</td><td>0.006</td><td>0.745</td><td>0.991</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>COLENDI</td><td>0.466</td><td>175,056</td><td>503,030.90</td><td>0.0001</td><td>-0.005</td><td>0.755</td><td>0.998</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ALTERNATIF</td><td>0.464</td><td>168,050</td><td>518,587.05</td><td>0.0007</td><td>-0.001</td><td>0.641</td><td>0.816</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>IS</td><td>0.463</td><td>-5,870,834</td><td>-14,763,743.50</td><td>-0.0006</td><td>-0.003</td><td>0.732</td><td>0.980</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>BURGAN</td><td>0.461</td><td>-856,023</td><td>-1,046,915.85</td><td>0.0003</td><td>0.001</td><td>0.702</td><td>0.914</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>NCM.</td><td>0.461</td><td>-4,385</td><td>46,701.35</td><td>0.0004</td><td>-0.007</td><td>0.760</td><td>0.998</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>TRIVE</td><td>0.457</td><td>239,792</td><td>41,365.25</td><td>0.0001</td><td>-0.013</td><td>0.743</td><td>0.981</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>SEKER</td><td>0.457</td><td>-62,630</td><td>17,565.55</td><td>0.0001</td><td>-0.014</td><td>0.749</td><td>0.990</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ANADOLU</td><td>0.456</td><td>-155,156</td><td>-139,821.15</td><td>-0.0000</td><td>-0.015</td><td>0.745</td><td>0.987</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ING YATIRIM</td><td>0.456</td><td>-56,281</td><td>-54,565.75</td><td>-0.0001</td><td>-0.013</td><td>0.749</td><td>0.994</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ALLBATROSS</td><td>0.455</td><td>226,701</td><td>339,607.00</td><td>0.0003</td><td>-0.044</td><td>0.630</td><td>0.810</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>BTCTURK</td><td>0.455</td><td>-64,474</td><td>-84,892.10</td><td>-0.0001</td><td>-0.007</td><td>0.707</td><td>0.933</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>INVESTAZ</td><td>0.452</td><td>-22,069</td><td>-223,318.85</td><td>-0.0005</td><td>-0.002</td><td>0.744</td><td>0.996</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>BASKENT</td><td>0.450</td><td>506,765</td><td>2,277,254.45</td><td>-0.0004</td><td>-0.043</td><td>0.510</td><td>0.652</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>BULLS</td><td>0.448</td><td>-1,274,013</td><td>-3,498,895.85</td><td>-0.0009</td><td>0.003</td><td>0.717</td><td>0.968</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ALB</td><td>0.447</td><td>-301,749</td><td>-1,062,100.45</td><td>-0.0007</td><td>-0.022</td><td>0.715</td><td>0.960</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>TURKISH</td><td>0.446</td><td>-289,490</td><td>-804,944.10</td><td>-0.0011</td><td>-0.006</td><td>0.639</td><td>0.856</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>MIDAS</td><td>0.443</td><td>-1,655,215</td><td>-3,488,191.60</td><td>-0.0010</td><td>-0.024</td><td>0.701</td><td>0.946</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ICBC TURKEY</td><td>0.442</td><td>-205,833</td><td>-584,639.25</td><td>-0.0016</td><td>0.003</td><td>0.699</td><td>0.955</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>A1 CAPITAL</td><td>0.442</td><td>-377,671</td><td>-5,064,239.10</td><td>-0.0013</td><td>-0.009</td><td>0.729</td><td>0.994</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>YATIRIM-FINANSM</td><td>0.439</td><td>-1,101,870</td><td>-6,433,979.50</td><td>-0.0014</td><td>-0.008</td><td>0.720</td><td>0.983</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>INFO</td><td>0.435</td><td>-7,810,736</td><td>-20,069,601.65</td><td>-0.0013</td><td>-0.009</td><td>0.700</td><td>0.950</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>ATA</td><td>0.432</td><td>-2,494,135</td><td>-8,298,073.55</td><td>-0.0018</td><td>-0.014</td><td>0.676</td><td>0.928</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>MARBAS</td><td>0.427</td><td>-1,300,312</td><td>-5,563,444.50</td><td>-0.0025</td><td>-0.011</td><td>0.677</td><td>0.945</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>HALK</td><td>0.426</td><td>-2,094,181</td><td>-9,068,944.85</td><td>-0.0022</td><td>-0.017</td><td>0.690</td><td>0.958</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>MEKSA</td><td>0.413</td><td>-978,308</td><td>-7,966,109.50</td><td>-0.0034</td><td>-0.012</td><td>0.677</td><td>0.969</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>OYAK</td><td>0.408</td><td>-490,729</td><td>-7,632,360.65</td><td>-0.0041</td><td>0.001</td><td>0.676</td><td>0.982</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>PIRAMIT</td><td>0.402</td><td>-94,620</td><td>-899,031.00</td><td>-0.0057</td><td>0.017</td><td>0.631</td><td>0.956</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class=''><td>UNLU MENKUL</td><td>0.402</td><td>-890,662</td><td>-7,294,129.10</td><td>-0.0048</td><td>0.002</td><td>0.636</td><td>0.943</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class='smi_low'><td>DINAMIK</td><td>0.395</td><td>-2,096</td><td>-12,835.45</td><td>-0.0028</td><td>-0.277</td><td>0.676</td><td>0.952</td><td>Noise / Short-term Trader</td></tr>
+<tr class='smi_low'><td>ZIRAAT</td><td>0.391</td><td>-10,301,037</td><td>-43,649,630.75</td><td>-0.0031</td><td>-0.004</td><td>0.615</td><td>0.869</td><td>Market Maker / Likidite Sağlayıcı</td></tr>
+<tr class='smi_low'><td>GCM YATIRIM</td><td>0.351</td><td>-37,509</td><td>-250,315.50</td><td>-0.0105</td><td>-0.015</td><td>0.080</td><td>0.267</td><td>Noise / Short-term Trader</td></tr>
+<tr class='smi_low'><td>HSBC</td><td>0.346</td><td>-3,173,632</td><td>-28,972,424.35</td><td>-0.0078</td><td>-0.004</td><td>0.571</td><td>0.919</td><td>Noise / Short-term Trader</td></tr>
+<tr class='smi_low'><td>METRO</td><td>0.285</td><td>10</td><td>-112.00</td><td>-0.0154</td><td>-0.165</td><td>0.420</td><td>0.880</td><td>Noise / Short-term Trader</td></tr>
+<tr class='smi_low'><td>QNB YATIRIM</td><td>0.222</td><td>-30,737,467</td><td>-173,843,693.80</td><td>-0.0071</td><td>-0.002</td><td>0.498</td><td>0.796</td><td>Noise / Short-term Trader</td></tr>
+</tbody></table>
+<h2>Smart Score & Ağırlıklar</h2>
+<svg width='900' height='320' style='background:#ffffff;border:1px solid #ddd;margin-bottom:10px;'>
+<line x1='80' y1='40' x2='80' y2='240' stroke='#555' stroke-width='1' />
+<line x1='80' y1='240' x2='605' y2='240' stroke='#555' stroke-width='1' />
+<rect x='80' y='40.0' width='20' height='200.0' fill='#3498db' />
+<rect x='85.0' y='222.64616644885857' width='10.0' height='17.353833551141435' fill='#e67e22' opacity='0.7' />
+<text x='90.0' y='255' transform='rotate(45 90.0 255)' fill='#000' font-size='9' text-anchor='start'>AK</text>
+<rect x='115' y='58.3300152289834' width='20' height='181.6699847710166' fill='#3498db' />
+<rect x='120.0' y='212.72701924286864' width='10.0' height='27.272980757131364' fill='#e67e22' opacity='0.7' />
+<text x='125.0' y='255' transform='rotate(45 125.0 255)' fill='#000' font-size='9' text-anchor='start'>BANK-OF-AMERICA</text>
+<rect x='150' y='78.51547866103903' width='20' height='161.48452133896097' fill='#3498db' />
+<rect x='155.0' y='234.73802487958275' width='10.0' height='5.261975120417247' fill='#e67e22' opacity='0.7' />
+<text x='160.0' y='255' transform='rotate(45 160.0 255)' fill='#000' font-size='9' text-anchor='start'>TEB</text>
+<rect x='185' y='86.55236723865607' width='20' height='153.44763276134393' fill='#3498db' />
+<rect x='190.0' y='236.61901680044036' width='10.0' height='3.380983199559637' fill='#e67e22' opacity='0.7' />
+<text x='195.0' y='255' transform='rotate(45 195.0 255)' fill='#000' font-size='9' text-anchor='start'>TERA</text>
+<rect x='220' y='69.6020901157465' width='20' height='170.3979098842535' fill='#3498db' />
+<rect x='225.0' y='191.92518291242277' width='10.0' height='48.07481708757723' fill='#e67e22' opacity='0.7' />
+<text x='230.0' y='255' transform='rotate(45 230.0 255)' fill='#000' font-size='9' text-anchor='start'>YAPI KREDI</text>
+<rect x='255' y='99.86866331421626' width='20' height='140.13133668578374' fill='#3498db' />
+<rect x='260.0' y='237.09708975320507' width='10.0' height='2.9029102467949315' fill='#e67e22' opacity='0.7' />
+<text x='265.0' y='255' transform='rotate(45 265.0 255)' fill='#000' font-size='9' text-anchor='start'>OSMANLI</text>
+<rect x='290' y='99.86608469213226' width='20' height='140.13391530786774' fill='#3498db' />
+<rect x='295.0' y='237.59121813045306' width='10.0' height='2.4087818695469423' fill='#e67e22' opacity='0.7' />
+<text x='300.0' y='255' transform='rotate(45 300.0 255)' fill='#000' font-size='9' text-anchor='start'>GEDIK</text>
+<rect x='325' y='101.58557108180918' width='20' height='138.41442891819082' fill='#3498db' />
+<rect x='330.0' y='233.9930606442581' width='10.0' height='6.006939355741906' fill='#e67e22' opacity='0.7' />
+<text x='335.0' y='255' transform='rotate(45 335.0 255)' fill='#000' font-size='9' text-anchor='start'>GARANTI</text>
+<rect x='360' y='106.9953130295485' width='20' height='133.0046869704515' fill='#3498db' />
+<rect x='365.0' y='238.253693062408' width='10.0' height='1.74630693759201' fill='#e67e22' opacity='0.7' />
+<text x='370.0' y='255' transform='rotate(45 370.0 255)' fill='#000' font-size='9' text-anchor='start'>PHILLIPCAPITAL</text>
+<rect x='395' y='112.58282355402676' width='20' height='127.41717644597324' fill='#3498db' />
+<rect x='400.0' y='239.9288142405475' width='10.0' height='0.07118575945250427' fill='#e67e22' opacity='0.7' />
+<text x='405.0' y='255' transform='rotate(45 405.0 255)' fill='#000' font-size='9' text-anchor='start'>BASKENT</text>
+<rect x='430' y='104.12317214052385' width='20' height='135.87682785947615' fill='#3498db' />
+<rect x='435.0' y='232.88867174006296' width='10.0' height='7.111328259937039' fill='#e67e22' opacity='0.7' />
+<text x='440.0' y='255' transform='rotate(45 440.0 255)' fill='#000' font-size='9' text-anchor='start'>DENIZ</text>
+<rect x='465' y='103.55150666700416' width='20' height='136.44849333299584' fill='#3498db' />
+<rect x='470.0' y='238.50148158540534' width='10.0' height='1.4985184145946562' fill='#e67e22' opacity='0.7' />
+<text x='475.0' y='255' transform='rotate(45 475.0 255)' fill='#000' font-size='9' text-anchor='start'>GLOBAL</text>
+<rect x='500' y='101.57406179233249' width='20' height='138.4259382076675' fill='#3498db' />
+<rect x='505.0' y='239.6441323774361' width='10.0' height='0.3558676225638919' fill='#e67e22' opacity='0.7' />
+<text x='510.0' y='255' transform='rotate(45 510.0 255)' fill='#000' font-size='9' text-anchor='start'>ALNUS</text>
+<rect x='535' y='105.84448892066806' width='20' height='134.15551107933194' fill='#3498db' />
+<rect x='540.0' y='239.54621245655437' width='10.0' height='0.4537875434456282' fill='#e67e22' opacity='0.7' />
+<text x='545.0' y='255' transform='rotate(45 545.0 255)' fill='#000' font-size='9' text-anchor='start'>AHLATCI</text>
+<rect x='570' y='108.38114511165162' width='20' height='131.61885488834838' fill='#3498db' />
+<rect x='575.0' y='239.9542428321007' width='10.0' height='0.04575716789929629' fill='#e67e22' opacity='0.7' />
+<text x='580.0' y='255' transform='rotate(45 580.0 255)' fill='#000' font-size='9' text-anchor='start'>ALTERNATIF</text>
+<rect x='100' y='10' width='12' height='12' fill='#3498db' /><text x='118' y='20' font-size='11'>SmartScore</text>
+<rect x='220' y='10' width='12' height='12' fill='#e67e22' /><text x='238' y='20' font-size='11'>Hacim Payı (V_share)</text>
+</svg>
+<h2>Smart Money Tablosu – Açıklamalar</h2>
+<ul>
+<li><strong>Kurum</strong>: Analiz edilen aracı kurum.</li>
+<li><strong>Final Pozisyon</strong>: Tarih aralığı sonunda net lot pozisyonu (pozitif=long, negatif=short).</li>
+<li><strong>Final Equity</strong>: Realized PnL + Unrealized PnL; kurumun tahtadaki toplam equity değeri.</li>
+<li><strong>PnL Verimliliği</strong>: Realized PnL / İşlem Hacmi; birim hacim başına getiri.</li>
+<li><strong>Pozisyon Kalitesi</strong>: Pozisyon değişimlerinin fiyat trendiyle korelasyonu (−1 ile +1 arası).</li>
+<li><strong>Smart Skor</strong>: Normalize edilmiş metriklerin ağırlıklı birleşimi; kurumun akıllı para niteliğini özetler.</li>
+<li><strong>MM Index</strong>: Flat kalma eğilimi + PnL verimliliğine göre market maker yakınlığı.</li>
+<li><strong>Flatness</strong>: Gün sonu pozisyonun traded notional'a oranına göre flat kalma derecesi.</li>
+<li><strong>Cluster</strong>: Kurumun davranışsal kümesi (Smart Long, MM, Noise Trader vb.).</li>
+</ul>
+<p><strong>Smart Skor formülü:</strong> 
+SmartScore = 0.30×PnL Verimliliği + 0.25×Pozisyon Kalitesi + 
+0.20×Equity Büyüklüğü + 0.15×Realized PnL + 0.10×Likidite Payı (0–1 ölçekli).
+</p>
+<h2>Cluster Dağılımı</h2>
+<table>
+<thead><tr><th>Cluster</th><th>Kurum Sayısı</th></tr></thead><tbody>
+<tr><td>Market Maker / Likidite Sağlayıcı</td><td>48</td></tr>
+<tr><td>Noise / Short-term Trader</td><td>5</td></tr>
+<tr><td>Smart Long / Trend Follower</td><td>4</td></tr>
+</tbody></table>
+<h2>Smart Money Index (SMI) & Günlük Equity Eğrisi</h2>
+<div style='display:flex;gap:24px;align-items:flex-start;justify-content:space-between;'>
+<svg width='700' height='300' style='background:#ffffff;border:1px solid #ddd;'>
+<line x1='30' y1='270' x2='670' y2='270' stroke='#555' stroke-width='1' />
+<line x1='30' y1='30' x2='30' y2='270' stroke='#555' stroke-width='1' />
+<polyline fill='none' stroke='#8e44ad' stroke-width='2' points='30.0,72.7 60.5,82.6 91.1,40.1 121.6,49.3 152.1,54.0 182.6,250.0 213.2,59.6 243.7,77.1 274.2,120.9 304.7,81.1 335.3,91.2 365.8,83.6 396.3,75.4 426.8,30.0 457.4,56.7 487.9,49.8 518.4,53.3 548.9,35.2 579.5,81.6 610.0,38.6' />
+</svg>
+<svg width='700' height='300' style='background:#ffffff;border:1px solid #ddd;'>
+<line x1='45' y1='255' x2='655' y2='255' stroke='#555' stroke-width='1' />
+<line x1='45' y1='45' x2='45' y2='255' stroke='#555' stroke-width='1' />
+<polyline fill='none' stroke='#1f77b4' stroke-width='1.5' points='45.0,188.3 77.1,188.8 109.2,190.2 141.3,189.3 173.4,192.1 205.5,193.4 237.6,176.1 269.7,179.9 301.8,179.9 333.9,180.5 366.1,179.7 398.2,173.7 430.3,121.5 462.4,109.6 494.5,112.8 526.6,89.0 558.7,77.1 590.8,74.9 622.9,68.9 655.0,45.0' />
+<polyline fill='none' stroke='#ff7f0e' stroke-width='1.5' points='45.0,190.1 77.1,194.1 109.2,187.5 141.3,207.5 173.4,201.3 205.5,197.3 237.6,252.1 269.7,238.9 301.8,244.8 333.9,255.0 366.1,254.4 398.2,242.3 430.3,174.3 462.4,156.1 494.5,162.2 526.6,129.0 558.7,119.8 590.8,118.9 622.9,119.4 655.0,100.3' />
+<polyline fill='none' stroke='#2ca02c' stroke-width='1.5' points='45.0,193.0 77.1,190.0 109.2,201.5 141.3,186.9 173.4,187.5 205.5,189.2 237.6,174.7 269.7,176.5 301.8,175.8 333.9,175.5 366.1,175.3 398.2,175.0 430.3,171.0 462.4,167.3 494.5,168.0 526.6,159.2 558.7,153.4 590.8,152.3 622.9,149.9 655.0,135.4' />
+<polyline fill='none' stroke='#d62728' stroke-width='1.5' points='45.0,202.4 77.1,202.9 109.2,193.3 141.3,204.4 173.4,205.1 205.5,201.1 237.6,237.9 269.7,230.2 301.8,232.7 333.9,237.4 366.1,237.2 398.2,230.6 430.3,191.8 462.4,183.8 494.5,185.4 526.6,169.2 558.7,160.7 590.8,159.3 622.9,156.2 655.0,142.4' />
+<polyline fill='none' stroke='#9467bd' stroke-width='1.5' points='45.0,198.1 77.1,197.5 109.2,191.9 141.3,201.2 173.4,198.5 205.5,196.8 237.6,223.7 269.7,216.5 301.8,218.0 333.9,220.3 366.1,218.5 398.2,216.6 430.3,200.0 462.4,194.9 494.5,192.9 526.6,180.5 558.7,175.8 590.8,174.8 622.9,172.9 655.0,158.7' />
+<rect x='55' y='45' width='12' height='12' fill='#1f77b4' />
+<text x='73' y='55' fill='#000' font-size='11'>AK</text>
+<rect x='55' y='63' width='12' height='12' fill='#ff7f0e' />
+<text x='73' y='73' fill='#000' font-size='11'>BANK-OF-AMERICA</text>
+<rect x='55' y='81' width='12' height='12' fill='#2ca02c' />
+<text x='73' y='91' fill='#000' font-size='11'>TEB</text>
+<rect x='55' y='99' width='12' height='12' fill='#d62728' />
+<text x='73' y='109' fill='#000' font-size='11'>TERA</text>
+<rect x='55' y='117' width='12' height='12' fill='#9467bd' />
+<text x='73' y='127' fill='#000' font-size='11'>YAPI KREDI</text>
+</svg>
+</div>
+</body></html>
